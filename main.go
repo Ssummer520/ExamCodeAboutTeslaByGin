@@ -22,13 +22,12 @@ import (
 // @contact.email support@swagger.io
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
-
 // @host localhost:8888
-// @host 124.220.12.138:8888
-
 // @BasePath
-
+/* @host 124.220.12.138:8888*/
+/* @host localhost:8888*/
 func main() {
+	/* @host 124.220.12.138:8888*/
 	envPort := ""
 	gin.SetMode(gin.ReleaseMode)
 	if gin.Mode() == gin.ReleaseMode {
@@ -50,7 +49,7 @@ func main() {
 		fmt.Println(gin.Mode())
 		r.Run(":" + envPort)
 	} else {
-		r.Run(":8081")
+		r.Run(":8888")
 	}
 }
 
