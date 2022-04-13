@@ -1,7 +1,6 @@
 package controllers
 
-
-import  ."ExamCode/conf"
+import . "ExamCode/conf"
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -49,7 +48,6 @@ func GetRateHandler(c *gin.Context) {
 		"rate": strconv.FormatFloat(r, 'f', 2, 32),
 	})
 }
-
 
 // carInventoryHandler
 // @Summary 获取最新库存数量
