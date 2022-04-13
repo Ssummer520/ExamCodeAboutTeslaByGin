@@ -1,6 +1,7 @@
 package controllers
 
-import . "ExamCode/conf"
+
+import  ."ExamCode/conf"
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -8,6 +9,12 @@ import (
 	"time"
 )
 
+// carInventoryHandler
+// @Summary 获取最新carid
+// @Tags CarInventoryController 库存相关
+// @Accept application/json
+// @Produce application/json
+// @Router /car [get]
 func GetCarHandler(c *gin.Context) {
 	CarLock.Lock()
 	if CarInventoryModel.List.Len() == 0 {
@@ -28,6 +35,12 @@ func GetCarHandler(c *gin.Context) {
 	}
 }
 
+// carInventoryHandler
+// @Summary 获取最新售卖率
+// @Tags CarInventoryController 库存相关
+// @Accept application/json
+// @Produce application/json
+// @Router /rate [get]
 func GetRateHandler(c *gin.Context) {
 	CarLock.RLock()
 	var r = CarInventoryModel.Rate
@@ -37,6 +50,13 @@ func GetRateHandler(c *gin.Context) {
 	})
 }
 
+
+// carInventoryHandler
+// @Summary 获取最新库存数量
+// @Tags CarInventoryController 库存相关
+// @Accept application/json
+// @Produce application/json
+// @Router /buffer [get]
 func GetBufferHandler(c *gin.Context) {
 	CarLock.RLock()
 	var count = CarInventoryModel.Rate * CarInventoryModel.X

@@ -44,4 +44,34 @@ paths:
       summary: 设置最新age
       tags:
       - AgeController 年龄相关
+  /buffer:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: 获取最新库存数量
+      tags:
+      - CarInventoryController 库存相关
+  /car:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: 获取最新carid
+      tags:
+      - CarInventoryController 库存相关
+  /rate:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: 获取最新售卖率
+      tags:
+      - CarInventoryController 库存相关
 swagger: "2.0"

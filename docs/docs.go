@@ -62,6 +62,51 @@ const docTemplate = `{
                 ],
                 "responses": {}
             }
+        },
+        "/buffer": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "CarInventoryController 库存相关"
+                ],
+                "summary": "获取最新库存数量",
+                "responses": {}
+            }
+        },
+        "/car": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "CarInventoryController 库存相关"
+                ],
+                "summary": "获取最新carid",
+                "responses": {}
+            }
+        },
+        "/rate": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "CarInventoryController 库存相关"
+                ],
+                "summary": "获取最新售卖率",
+                "responses": {}
+            }
         }
     },
     "definitions": {
