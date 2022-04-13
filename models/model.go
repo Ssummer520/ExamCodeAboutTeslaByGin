@@ -12,5 +12,5 @@ type CarInventory struct {
 
 // AgeModel age
 type AgeModel struct {
-	Age int `json:"age"` 	//年龄
+	Age int `json:"age"` //年龄
 }

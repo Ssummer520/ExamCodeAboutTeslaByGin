@@ -12,7 +12,7 @@ const docTemplate = `{
         "title": "{{.Title}}",
         "termsOfService": "http://swagger.io/terms/",
         "contact": {
-            "name": "这里写联系人信息",
+            "name": "1362",
             "url": "http://www.swagger.io/support",
             "email": "support@swagger.io"
         },
@@ -80,11 +80,11 @@ const docTemplate = `{
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "1.0",
-	Host:             "localhost:8080",
+	Host:             "124.220.12.138:8888",
 	BasePath:         "",
 	Schemes:          []string{},
 	Title:            "ExamCodeAboutTeslaByGin",
-	Description:      "这里写描述信息",
+	Description:      "ExamCodeAboutTeslaByGin",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 }
