@@ -8,6 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
+	"os"
 	"time"
 )
 
@@ -20,12 +21,13 @@ import (
 // @contact.email support@swagger.io
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+
 // @host localhost:8080
 // @host 124.220.12.138:8888
 // @BasePath
 
 func main() {
-	//envPort:= os.Getenv("ASPNETCORE_PORT")
+	envPort := os.Getenv("ASPNETCORE_PORT")
 	CarInventoryModel.X = 2
 	job()
 	r := gin.New()
@@ -36,8 +38,8 @@ func main() {
 	r.GET("/buffer", GetBufferHandler)
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	r.Use(cors.Default())
-	//r.Run(":"+envPort)
-	r.Run()
+	r.Run(":" + envPort)
+	//r.Run()
 }
 
 func job() {
