@@ -1,0 +1,47 @@
+definitions:
+  models.AgeModel:
+    properties:
+      age:
+        description: 年龄
+        type: integer
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: support@swagger.io
+    name: 这里写联系人信息
+    url: http://www.swagger.io/support
+  description: 这里写描述信息
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: ExamCodeAboutTeslaByGin
+  version: "1.0"
+paths:
+  /age:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: 获取最新age
+      tags:
+      - AgeController 年龄相关
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: object
+        schema:
+          $ref: '#/definitions/models.AgeModel'
+      produces:
+      - application/json
+      responses: {}
+      summary: 设置最新age
+      tags:
+      - AgeController 年龄相关
+swagger: "2.0"

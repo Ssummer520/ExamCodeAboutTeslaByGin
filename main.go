@@ -10,17 +10,18 @@ import (
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 	"time"
 )
-// @title 这里写标题
+
+// @title ExamCodeAboutTeslaByGin
 // @version 1.0
-// @description 这里写描述信息
+// @description ExamCodeAboutTeslaByGin
 // @termsOfService http://swagger.io/terms/
-// @contact.name 这里写联系人信息
+// @contact.name 1362
 // @contact.url http://www.swagger.io/support
 // @contact.email support@swagger.io
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
-// @host 124.220.12.138:8888
 // @host localhost:8080
+// @host 124.220.12.138:8888
 // @BasePath
 
 func main() {
